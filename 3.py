@@ -1,9 +1,13 @@
-# exit
+# special function
 
-for i in range(10):
-    if i == 5:
-        print(exit)
-        exit()
-    print(i)
+class point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-print("this is the end of the program")
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+
+p1 = point(2, 3)
+print(p1)

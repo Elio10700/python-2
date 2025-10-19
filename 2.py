@@ -1,20 +1,21 @@
-# zip function
+# computer price
 
-a = [1, 2, 3, 4]
-b = ['a', 'b', 'c', 'd']
+class computer:
+    def __init__(self):
+        self.__maxprice = 900
 
-s2 = list(zip(a, b))
-print(s2)
+    def pprice(self):
+        print("The max price of the computer is", self.__maxprice)
 
-# reverse zipping
-s1 = (10, 20, 30)
-s2 = (100, 200, 300)
+    def setprice(self, p):
+        self.__maxprice = p
 
-s3 = zip(s1, s2[::-1])
-print(list(s3))
 
-stock = ['infosys', 'tcs', 'reliance']
-price = [234, 678, 982]
+c1 = computer()
+c1.pprice()
 
-dic1 = {stocks: prices for stocks, prices in zip(stock, price)}
-print(dic1)
+c1.__maxprice = 1000
+c1.pprice()
+
+c1.setprice(1400)
+c1.pprice()

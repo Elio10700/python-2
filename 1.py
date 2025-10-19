@@ -1,14 +1,16 @@
-list1 = [23, 45, 67, 89]
-list2 = [2, 3, 56, 66]
+# Private variable
 
-res = map(lambda x, y: x + y, list1, list2)
-print(list(res))
+class private:
+    __private_var = 20
 
-def square(x):
-    return x * x
+    def __private_meth(self):
+        print("I am a private method")
 
-a = [2, 7, 89, 45]
+    def print_value(self):
+        print("The value of the private variable is", self.__private_var)
 
-res = map(square, a)
-print("The square is:")
-print(list(res))
+
+obj1 = private()
+obj1.print_value()
+print(obj1.__private_var)
+    
